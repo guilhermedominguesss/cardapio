@@ -7,9 +7,9 @@ const WHATSAPP_NUMERO = "5500000000000";
 const WHATSAPP_MENSAGEM = "Olá! Vim pelo cardápio digital e quero fazer um pedido.";
 
 // Instagram e localização do rodapé
-const INSTAGRAM_USUARIO = "marombaespetinho"; // sem o @
-const ENDERECO_TEXTO = "Endereço da academia";
-const LINK_MAPA = "https://maps.google.com/?q=Maromba+Espetinho"; // cole aqui o link do Google Maps
+const INSTAGRAM_USUARIO = "espetinhosmaromba"; // sem o @
+const ENDERECO_TEXTO = "Av. Rui Barbosa, 9327 - Centro, São José dos Pinhais - PR";
+const LINK_MAPA = "https://www.google.com/maps/search/?api=1&query=" + encodeURIComponent("Av. Rui Barbosa, 9327 - Centro, São José dos Pinhais - PR"); // cole aqui o link do Google Maps
 
 /* =====================================================================
    A PARTIR DAQUI NÃO PRECISA MEXER
