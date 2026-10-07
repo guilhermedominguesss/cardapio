@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+
+  <title>Maromba Espetinho | Cardápio Digital</title>
+  <meta name="description" content="Cardápio digital do Maromba Espetinho: espetinhos na brasa, lanches, açaí e shakes de whey. Proteína na brasa. Sabor de verdade.">
+  <!-- theme-color = cor de fundo da logo (--bg-logo no style.css) -->
+  <meta name="theme-color" content="#353334">
+
+  <!-- Compartilhamento (WhatsApp, Instagram, Facebook).
+       Depois de publicar, troque "img/logo.jpeg" pelo endereço completo, ex.:
+       https://seusite.netlify.app/img/logo.jpeg -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:title" content="Maromba Espetinho | Cardápio Digital">
+  <meta property="og:description" content="Proteína na brasa. Sabor de verdade.">
+  <meta property="og:image" content="img/logo.jpeg">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" href="img/logo-hero.jpg">
+  <link rel="apple-touch-icon" href="img/logo-hero.jpg">
+
+  <!-- Fontes: Bebas Neue (títulos) + Inter (texto) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+  <script>document.documentElement.classList.add("js");</script>
+</head>
+<body>
+
+  <!-- ============ HERO ============ -->
+  <header class="hero">
+    <h1 class="sr-only">Maromba Espetinho</h1>
+    <img class="hero__logo" src="img/logo-hero.jpg" alt="Logo Maromba Espetinho: touro vermelho musculoso em um escudo"
+         width="1090" height="840" fetchpriority="high"
+         onerror="this.hidden=true;document.querySelector('.hero__fallback').hidden=false">
+    <p class="hero__fallback" hidden>Maromba <span>Espetinhos</span></p>
+    <p class="hero__frase">Proteína na brasa. Sabor de verdade.</p>
+    <a class="hero__seta" href="#carne" aria-label="Ver o cardápio">
+      <svg viewBox="0 0 24 24" width="28" height="28" aria-hidden="true"><path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </a>
+  </header>
+
+  <!-- ============ BARRA DE CATEGORIAS (gerada pelo script.js) ============ -->
+  <nav class="categorias" aria-label="Categorias do cardápio">
+    <div class="categorias__trilho" id="categorias"></div>
+  </nav>
+
+  <!-- ============ CARDÁPIO (gerado pelo script.js a partir do menu-data.js) ============ -->
+  <main id="cardapio" class="cardapio"></main>
+
+  <!-- ============ RODAPÉ ============ -->
+  <footer class="rodape">
+    <p class="rodape__nome">Maromba Espetinho</p>
+    <p class="rodape__slogan">Feito na brasa</p>
+    <div class="rodape__links">
+      <a id="link-instagram" href="#" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor"/></svg>
+        <span id="texto-instagram">@marombaespetinho</span>
+      </a>
+      <a id="link-mapa" href="#" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M12 22s7-6.2 7-12a7 7 0 10-14 0c0 5.8 7 12 7 12z" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="10" r="2.5" fill="currentColor"/></svg>
+        <span id="texto-endereco">Endereço da academia</span>
+      </a>
+    </div>
+    <p class="rodape__copy">© <span id="ano"></span> Maromba Espetinho</p>
+  </footer>
+
+  <!-- ============ BOTÃO WHATSAPP ============ -->
+  <a class="whatsapp" id="botao-whatsapp" href="#" target="_blank" rel="noopener" aria-label="Fazer pedido pelo WhatsApp">
+    <svg viewBox="0 0 32 32" width="30" height="30" aria-hidden="true"><path fill="currentColor" d="M16.04 3C8.9 3 3.1 8.8 3.1 15.94c0 2.28.6 4.5 1.73 6.46L3 29l6.78-1.78a12.9 12.9 0 006.26 1.6h.01c7.13 0 12.94-5.8 12.94-12.94C28.99 8.8 23.18 3 16.04 3zm0 23.64h-.01a10.7 10.7 0 01-5.46-1.5l-.39-.23-4.02 1.06 1.07-3.92-.26-.4a10.68 10.68 0 01-1.64-5.71c0-5.92 4.81-10.73 10.73-10.73 5.92 0 10.72 4.81 10.72 10.73 0 5.92-4.81 10.7-10.74 10.7zm5.88-8.03c-.32-.16-1.91-.94-2.2-1.05-.3-.1-.51-.16-.73.16-.21.32-.83 1.05-1.02 1.27-.19.21-.38.24-.7.08-.32-.16-1.36-.5-2.59-1.6-.96-.85-1.6-1.9-1.79-2.22-.19-.32-.02-.5.14-.66.14-.14.32-.38.48-.56.16-.19.21-.32.32-.54.1-.21.05-.4-.03-.56-.08-.16-.72-1.74-.99-2.38-.26-.62-.53-.54-.73-.55h-.62c-.21 0-.56.08-.86.4-.29.32-1.12 1.1-1.12 2.68 0 1.58 1.15 3.11 1.31 3.32.16.21 2.26 3.45 5.47 4.84.77.33 1.36.53 1.83.68.77.24 1.47.21 2.02.13.62-.09 1.91-.78 2.18-1.53.27-.75.27-1.4.19-1.53-.08-.13-.29-.21-.62-.37z"/></svg>
+  </a>
+
+  <script src="menu-data.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
